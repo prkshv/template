@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Dashboard</title>
+</head>
+<body>
+    <h1>Maker Dashboard</h1><br>
+    <h1>This is only visible after signing in as maker</h1><br>
+     {% if user.is_authenticated %}
+    <a href="/signout">Sign Out</a>
+    {% endif %}
+</body>
+</html>

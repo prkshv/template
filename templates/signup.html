@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+
+{% for message in messages %}
+  <h3>{{message}}</h3>
+{% endfor %}
+
+    <form action="/signup" method="POST">
+    {% csrf_token %}
+        <input type="text" name="fname" placeholder="first name"><br>
+        <input type="text" name="lname" placeholder="last name"><br>
+        <input type="email" name="email" placeholder="email id"><br>
+        <input type="text" name="uname" placeholder="username"><br>
+        <input type="password" name="psw" placeholder="password"><br>
+        <input type="password" name="pswconfirm" placeholder="password"><br>
+        <input type="text" name="role" placeholder="role (user/maker)">
+        <input type="submit" name="">
+    </form>
+</body>
+</html>
